@@ -1,0 +1,6 @@
+[submodule "doctissimo-api"]
+	path = doctissimo-api
+	url = git@github.com:tifo1985/doctissimo-api.git
+[submodule "doctissimo-front"]
+	path = doctissimo-front
+	url = git@github.com:tifo1985/doctissimo-front.git

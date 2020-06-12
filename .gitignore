@@ -1,17 +1,3 @@
 ###> phpStorm ###
 /.idea/
 ###< phpStorm ###
-
-###> FRONT: symfony/framework-bundle ###
-/doctissimo-front/.env.local
-/doctissimo-front/public/bundles/
-/doctissimo-front/var/
-/doctissimo-front/vendor/
-###< FRONT: symfony/framework-bundle ###
-
-###> API: symfony/framework-bundle ###
-/doctissimo-api/.env.local
-/doctissimo-api/public/bundles/
-/doctissimo-api/var/
-/doctissimo-api/vendor/
-###< API: symfony/framework-bundle ###
