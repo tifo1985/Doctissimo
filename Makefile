@@ -1,5 +1,5 @@
 DOCKER_COMPOSE=@docker-compose $(COMPOSE_FILE_PATH)
-COMPOSE_FILE_PATH := -f doctissimo-api/docker-compose.yml
+COMPOSE_FILE_PATH := -f doctissimo-api/docker-compose.yml -f doctissimo-front/docker-compose.yml
 DOCKER_EXEC_CMD=$(DOCKER_COMPOSE) exec
 DOCKER_SQL := $(DOCKER_EXEC_CMD) doctissimo-api-mysql mysql -u root -proot -e
 DB_NAME=$(shell grep ^DB_NAME= ./doctissimo-api/.env | cut -d '=' -f 2-)
