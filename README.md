@@ -5,7 +5,6 @@ Doctissimo
 1. [Prerequisites](#1-prerequisites)
 2. [Installation](#2-installation)
 3. [Running the server](#3-running-the-server)
-4. [Env variables](#4-env-variables)
 
 ## 0. Git Flow
 
@@ -57,8 +56,6 @@ make buildImage
 make start
 make afterBuild
 ```
-It will generate you a `.env` file, YOU SHOULD verify it
-You can see possible variable and explanation on [4. env variable section](#4-env-variables)
 
 ## 3. Running the server
 

@@ -14,7 +14,7 @@ buildImage: ## Build the containers
 start: ## Start the containers (only work when installed)
 	$(DOCKER_COMPOSE) up -d $(ARGUMENT)
 
-afterBuild: destroyCreateDB migrateDB
+afterBuild: destroyCreateDB migrateDB vendorInstall
 
 destroyCreateDB: ## create the asked database and user
 	$(DOCKER_SQL) "drop database if exists $(DB_NAME)"
@@ -25,3 +25,7 @@ destroyCreateDB: ## create the asked database and user
 
 migrateDB: ## Execute a database SQL file.
 	$(DOCKER_EXEC_CMD) -T doctissimo-api-mysql mysql -u root -proot $(DB_NAME) < doctissimo-api/database.sql
+
+vendorInstall: ## Install the vendors
+	$(DOCKER_EXEC_CMD) doctissimo-api-php composer install
+	$(DOCKER_EXEC_CMD) doctissimo-front-php composer install
