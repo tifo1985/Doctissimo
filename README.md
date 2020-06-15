@@ -53,7 +53,9 @@ git submodule update
 
 Run:
 ```bash
-make install
+make buildImage
+make start
+make afterBuild
 ```
 It will generate you a `.env` file, YOU SHOULD verify it
 You can see possible variable and explanation on [4. env variable section](#4-env-variables)
